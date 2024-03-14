@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 
 class Task1
 {
@@ -67,42 +66,60 @@ class Task2
 
 class Task34
 {
-    public static void task3()
+    public static void ShowArr(int[] arr)
     {
-        int n = 16;
-        int m = 8;
-        int[] numbers = new int[n];
+        for (int i = 0; i < arr.Length; i++)
+        {
+            Console.Write(arr[i] + " ");
+        }
+    }
+    public static void AddArr(int n,int[] numbers)
+    {
         
         for (int i = 0; i < n; i++)
         {
             Console.WriteLine($"Введіть {i + 1}-е число:");
             numbers[i] = int.Parse(Console.ReadLine());
         }
+    }
+
+    public static void task3()
+    {
         
-        //3
+        int n = 16;
+        int m = 8;
+        int[] numbers = new int[n];
+        AddArr(n,numbers);
         
-        //
-        // int min = numbers[0];
-        // int max = numbers[0];
-        // for (int i = 0; i < n; i++)
-        // {
-        //     if (numbers[i] < min)
-        //     {
-        //         min = numbers[i];
-        //     }
-        //     if (numbers[i] > max)
-        //     {
-        //         max = numbers[i];
-        //     }
-        // }
-        // Console.WriteLine();
-        // for (int i = 0; i < n; i++)
-        // {
-        //     Console.Write(numbers[i] + " ");
-        // }
-        // Console.WriteLine();
-        // Console.WriteLine($"min: {min}");
-        // Console.WriteLine($"max: {max}");
+         int min = numbers[0];
+         int max = numbers[0];
+         for (int i = 0; i < n; i++)
+         {
+             if (numbers[i] < min)
+             {
+                 min = numbers[i];
+             }
+             if (numbers[i] > max)
+             {
+                 max = numbers[i];
+             }
+         }
+         Console.WriteLine();
+         for (int i = 0; i < n; i++)
+         {
+             Console.Write(numbers[i] + " ");
+         }
+         Console.WriteLine();
+         Console.WriteLine($"min: {min}");
+         Console.WriteLine($"max: {max}");
+    }
+    public static void task4()
+    {
+        int n = 16;
+        int m = 8;
+        int[] numbers = new int[n];
+        AddArr(n,numbers);
+        
 
         int[] result = new int[n];
         int count = 0;
@@ -114,11 +131,10 @@ class Task34
                 result[count] = numbers[i];
                 count++;
             }
-            
+
+            ShowArr(result);
         }
-        for (int i = 0; i < count; i++)
-        {
-            Console.Write(result[i] + " ");
-        }
+        
     }
 }
+
