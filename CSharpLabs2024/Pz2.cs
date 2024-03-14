@@ -134,7 +134,7 @@ class Task34
         int[] result = new int[count];
         
         
-        for (int i = 0; i < n; i++)
+        for (int i = 0; i < count; i++)
         {
             if (Math.Abs(numbers[i]) > m)
             {
