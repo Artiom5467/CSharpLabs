@@ -1,70 +1,74 @@
 ﻿
 using System;
 
-class Program
+class Task1
 {
     static void Main(string[] args)
     {
         
-        // 1
-        
-        // int[] numbers = new int[3];
-        // for (int i = 0; i < numbers.Length; i++)
-        // {
-        //     Console.WriteLine($"Введіть {i + 1}-е число:");
-        //     numbers[i] = int.Parse(Console.ReadLine());
-        // }
-        // Console.WriteLine();
-        // for(int i = 0; i < numbers.Length; i++)
-        // {
-        //     if (numbers[i] >= 1 && numbers[i] <= 16)
-        //     {
-        //         Console.WriteLine(numbers[i]);
-        //     }
-        // }
+        int[] numbers = new int[3];
+        for (int i = 0; i < numbers.Length; i++)
+        {
+            Console.WriteLine($"Введіть {i + 1}-е число:");
+            numbers[i] = int.Parse(Console.ReadLine());
+        }
+        Console.WriteLine();
+        for(int i = 0; i < numbers.Length; i++)
+        {
+            if (numbers[i] >= 1 && numbers[i] <= 16)
+            {
+                Console.WriteLine(numbers[i]);
+            }
+        }
         
         
-        //2
         
-        
-        // double c = 5;
-        // double b = 8;
-        // double a = 12;
-        //
-        // if (a + b <= c || a + c <= b || b + c <= a)
-        // {
-        //     Console.WriteLine("Трикутник не трикутник");
-        //     return;
-        // }
-        //
-        // double perimeter = a + b + c;
-        // double semiperimeter = perimeter / 2;
-        // double area = Math.Sqrt(semiperimeter * (semiperimeter - a) * (semiperimeter - b) * (semiperimeter - c));
-        //
-        //
-        // string triangleType;
-        // if (a == b && b == c)
-        // {
-        //     triangleType = "Рівносторонній";
-        // }
-        // else if (a == b || a == c || b == c)
-        // {
-        //     triangleType = "Рівнобедрений";
-        // }
-        // else
-        // {
-        //     triangleType = "Різносторонній";
-        // }
-        //
-        // Console.WriteLine($"Периметр трикутника: {perimeter}");
-        // Console.WriteLine($"Площа трикутника: {area}");
-        // Console.WriteLine($"Вид трикутника: {triangleType}");
+    }
+}
 
+class Task2
+{
+    public static void task2()
+    {
+        double c = 5;
+        double b = 8;
+        double a = 12;
+        
+        if (a + b <= c || a + c <= b || b + c <= a)
+        {
+            Console.WriteLine("Трикутник не трикутник");
+            return;
+        }
+        
+        double perimeter = a + b + c;
+        double semiperimeter = perimeter / 2;
+        double area = Math.Sqrt(semiperimeter * (semiperimeter - a) * (semiperimeter - b) * (semiperimeter - c));
         
         
-       
+        string triangleType;
+        if (a == b && b == c)
+        {
+            triangleType = "Рівносторонній";
+        }
+        else if (a == b || a == c || b == c)
+        {
+            triangleType = "Рівнобедрений";
+        }
+        else
+        {
+            triangleType = "Різносторонній";
+        }
         
-        //3-4
+        Console.WriteLine($"Периметр трикутника: {perimeter}");
+        Console.WriteLine($"Площа трикутника: {area}");
+        Console.WriteLine($"Вид трикутника: {triangleType}");
+    }
+}
+
+class Task34
+{
+    public static void task3()
+    {
         int n = 16;
         int m = 8;
         int[] numbers = new int[n];
