@@ -120,9 +120,19 @@ class Task34
         int[] numbers = new int[n];
         AddArr(n,numbers);
         
-
-        int[] result = new int[n];
         int count = 0;
+        
+        for (int i = 0; i < n; i++)
+        {
+            if (Math.Abs(numbers[i]) > m)
+            {
+                count++;
+            }
+            
+        }
+
+        int[] result = new int[count];
+        
         
         for (int i = 0; i < n; i++)
         {
@@ -132,9 +142,9 @@ class Task34
                 count++;
             }
 
-            ShowArr(result);
+            
         }
-        
+        ShowArr(result);
     }
 }
 
